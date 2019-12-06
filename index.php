@@ -5,26 +5,34 @@
     <title>Exercise OpenWeatherMap with PHP</title>
 </head>
 <body>
+<div class="heading">
     <h1>Check the weather</h1>
-    <div>
-
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 <input id="input" name="input" type="text" placeholder="City">
 <input type="submit" value="Submit">
 </form>
 </div>
 <style>
+.heading{
+    display: grid;
+    justify-content: center;
+}
 body {
 background-image: url("img/566396.jpg");
 background-repeat: no-repeat;
 color: white;
 }
 .card {
-    margin: 3px;
-    border: 2PX;
-    padding: 5px;
+    margin: 35px;
+    border: 23PX;
+    padding: 15px;
+    background-color: black;
     display: flex;
     justify-content: center;
+    
+}
+p {
+    margin: 10px
 }
 </style>
 <?php
@@ -49,7 +57,7 @@ if (isset($_POST["input"])) { ?>
     <p style="font-weight: bold">Date: <?php echo(date("l d/m",$date)); ?></p> 
     <p><strong>Temp:</strong> <?php echo($temp); ?>°C</p>  
     <p><strong>Wind:</strong> <?php echo($wind); ?> km/h</p> 
-    <p><?php echo($weather); ?></p>
+    <p> <?php echo($weather); ?></p>
     <img src="img/<?php echo($icon)?>.png">  
     </div>
 <?php } }?>
