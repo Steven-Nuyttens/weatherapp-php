@@ -50,7 +50,7 @@ if (isset($_POST["input"])) { ?>
     <p><strong>Temp:</strong> <?php echo($temp); ?>°C</p>  
     <p><strong>Wind:</strong> <?php echo($wind); ?> km/h</p> 
     <p><?php echo($weather); ?></p>
-    <img src="/img<?php echo $icon?>.png">  
+    <img src="/img<?php echo($icon)?>.png">  
     </div>
 <?php } }?>
 
