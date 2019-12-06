@@ -23,7 +23,6 @@ color: white;
     margin: 3px;
     border: 2PX;
     padding: 5px;
-    background-color: offwhite;
     display: flex;
     justify-content: center;
 }
